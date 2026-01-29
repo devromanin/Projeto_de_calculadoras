@@ -2,26 +2,6 @@ Projeto de Calculadoras
 
 Este repositório contém um conjunto de calculadoras desenvolvidas em Python com foco em boas práticas de programação, tipagem estática, validações e testes unitários. O projeto simula regras de negócio comuns em APIs, incluindo tratamento adequado de erros e respostas padronizadas.
 
-Estrutura do Projeto
-
-src/
-Código-fonte principal do projeto, incluindo:
-
-calculadoras
-
-interfaces
-
-tratamento de erros personalizados
-
-tests/
-Testes unitários criados com pytest para validar:
-
-regras de negócio
-
-validação de dados
-
-cenários de sucesso e falha
-
 Funcionalidades
 
 O projeto conta com múltiplas calculadoras, cada uma representando um cenário diferente de processamento de dados:
