@@ -1,60 +1,66 @@
 Projeto de Calculadoras
 
-Este repositório contém um conjunto de calculadoras desenvolvidas em Python com foco em boas práticas de programação, tipagem estática, validações e testes unitários. O projeto simula regras de negócio comuns em APIs, incluindo tratamento adequado de erros e respostas padronizadas.
+Projeto em Python que reúne diferentes calculadoras com foco em boas práticas de backend, tipagem, validação de dados, regras de negócio e testes unitários.
+A ideia é simular cenários reais de APIs, incluindo tratamento adequado de erros e respostas padronizadas.
 
-Funcionalidades
+📁 Estrutura do Projeto
 
-O projeto conta com múltiplas calculadoras, cada uma representando um cenário diferente de processamento de dados:
+src/
+Contém todo o código-fonte da aplicação:
 
-Calculator1, Calculator2, Calculator3 e Calculator4
+calculadoras
 
-Validação de entrada de dados
+interfaces
 
-Cálculo de métricas como média e variância
+tratamento de erros personalizados
 
-Tratamento de erros HTTP:
+tests/
+Contém os testes unitários escritos com pytest, cobrindo:
 
-400 (Bad Request) para regras de negócio inválidas
+validações de entrada
 
-422 (Unprocessable Entity) para erros de entrada
+regras de negócio
 
-Respostas formatadas em padrão consistente
+cenários de sucesso e falha
 
-Testes
+⚙️ Funcionalidades
 
-Os testes foram escritos utilizando pytest e utilizam mocks para simular requests e dependências externas.
+O projeto possui múltiplas calculadoras, cada uma representando um fluxo diferente de processamento de dados:
 
-Para executar os testes, rode na raiz do projeto:
+Calculator1
+
+Calculator2
+
+Calculator3
+
+Calculator4
+
+Cada calculadora implementa:
+
+validação de dados de entrada
+
+processamento de cálculos (média, variância, etc.)
+
+tratamento de erros HTTP
+
+retorno de respostas estruturadas
+
+🚨 Tratamento de Erros
+
+O projeto simula erros comuns de APIs REST:
+
+400 – Bad Request
+Usado quando a regra de negócio é violada
+
+422 – Unprocessable Entity
+Usado quando o corpo da requisição está mal formatado
+
+As exceções são personalizadas e testadas com pytest.
+
+🧪 Testes
+
+Os testes são feitos com pytest e utilizam mocks para simular requests e dependências externas, garantindo isolamento da lógica.
+
+Para rodar os testes, execute na raiz do projeto:
 
 python -m pytest
-
-Exemplo de Uso
-
-Exemplo de chamada da Calculator4:
-
-request = { "numbers": [10, 20, 30] }
-resultado = Calculator4(driver_handler).calculate(request)
-
-Resposta esperada:
-
-{
-"data": {
-"Calculator": 4,
-"value": 20.0,
-"Success": true
-}
-}
-
-Tecnologias e Conceitos
-
-Python 3
-
-Tipagem com typing
-
-Arquitetura orientada a classes
-
-Injeção de dependência
-
-Testes unitários com pytest
-
-Exceções customizadas para simular erros HTTP
